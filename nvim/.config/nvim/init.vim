@@ -8,6 +8,7 @@ Plug 'junegunn/fzf.vim'
 " Language plugins
 Plug 'dag/vim-fish'
 Plug 'dense-analysis/ale'
+Plug 'neovim/nvim-lspconfig'
 
 " Themes
 Plug 'projekt0n/github-nvim-theme'
@@ -28,6 +29,11 @@ set showmatch
 set ignorecase
 set smartcase
 filetype plugin indent on
+
+" Enable clangd
+lua << EOF
+require'lspconfig'.clangd.setup{}
+EOF
 
 " Setup theme
 lua require('github-theme').setup()
