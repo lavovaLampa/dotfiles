@@ -2,8 +2,10 @@ call plug#begin('~/.vim/plugged')
 
 " Vim plugins
 Plug 'tpope/vim-sensible'
-Plug 'vim-airline/vim-airline'
 Plug 'junegunn/fzf.vim'
+Plug 'nvim-lualine/lualine.nvim'
+" Lualine icons
+Plug 'kyazdani42/nvim-web-devicons'
 
 " Language plugins
 Plug 'dag/vim-fish'
@@ -38,8 +40,21 @@ set ignorecase
 set smartcase
 filetype plugin indent on
 
-" Setup theme
-lua require('github-theme').setup()
+" Lualine config
+lua << EOF
+require("lualine").setup({
+    options = {
+        theme = "github"
+    }
+})
+EOF
+
+" Theme config
+lua << EOF
+require("github-theme").setup({
+    theme_style = "light_default"
+})
+EOF
 
 autocmd FileType fish compiler fish
 autocmd FileType fish setlocal textwidth=79
@@ -47,5 +62,3 @@ autocmd FileType fish setlocal foldmethod=expr
 
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | silent! pclose | endif
 
-" airline config
-let g:airline#extensions#ale#enabled = 1
