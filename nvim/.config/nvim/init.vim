@@ -36,7 +36,7 @@ filetype plugin indent on
 lua << EOF
 require("lualine").setup({
     options = {
-        theme = "github"
+        theme = "onelight"
     }
 })
 EOF

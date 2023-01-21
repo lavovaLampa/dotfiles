@@ -1,9 +1,10 @@
-theme = "tokyonight"
+theme = "catppuccin_latte"
 
 [editor]
 line-number = "relative"
 cursorline = true
 color-modes = true
+bufferline = "always"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -16,3 +17,5 @@ render = true
 [keys.normal]
 "C-e" = "scroll_down"
 "C-y" = "scroll_up"
+"}" = "goto_next_paragraph"
+"{" = "goto_prev_paragraph"
