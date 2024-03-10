@@ -1,15 +1,15 @@
-[[language]]
-name = "python"
-file-types = ["py", "pyi"]
-auto-format = false
-roots=["pyproject.toml"]
-language-server = { command = "pyright-langserver", args = ["--stdio"] }
-formatter = { command = "black", args = ["-"]}
-config = { "analysis" = { "typeCheckingMode" = "strict", "autoSearchPaths" = true, "diagnosticMode" = "workspace", "useLibraryCodeForTypes" = true } }
+# [[language]]
+# name = "python"
+# file-types = ["py", "pyi"]
+# auto-format = false
+# roots=["pyproject.toml"]
+# language-server = { command = "pyright-langserver", args = ["--stdio"] }
+# formatter = { command = "black", args = ["-"]}
+# config = { "analysis" = { "typeCheckingMode" = "strict", "autoSearchPaths" = true, "diagnosticMode" = "workspace", "useLibraryCodeForTypes" = true } }
 
-[[language]]
-name = "reStructuredText"
-language-server = { command = "ltex-ls" } 
-file-types = ["rst"]
-scope = "source.restructuredtext"
-roots = []
+# [[language]]
+# name = "reStructuredText"
+# language-server = { command = "ltex-ls" } 
+# file-types = ["rst"]
+# scope = "source.restructuredtext"
+# roots = []
